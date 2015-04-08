@@ -15,7 +15,7 @@ PHPの動くWebサーバのドキュメントルートに
 を入れておく。
 
 index.htmlにアクセスすると、
-![AzureML MNIST 確認フォーム](https://github.com/wiki/tottok-ug/tottok-ug-azure-ml-mnist-test-web-ui/images/azureml-mnist-form.png)
+![AzureML MNIST 確認フォーム](img/azureml-mnist-form.png)
 
 のような画面が表示されます。
 
