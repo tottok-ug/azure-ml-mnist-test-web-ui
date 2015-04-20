@@ -65,3 +65,8 @@ table {
     content: "| ";
   }
 }
+
+#result {
+  font-size: 48px;	
+	
+}
