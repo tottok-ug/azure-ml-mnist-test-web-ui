@@ -33,10 +33,10 @@ Machine Learning / Train / Train Model をドラッグ＆ドロップ
 MNIST Train 60k 28x28 denseの下の点とTrain Modelの右上を線でつなげる
 
 Machine Learning / Initialize Model / Classification / の
-・Multiclass Decision Forest
-・Multiclass Decision Jungle
-・Multiclass Logistic Regression
-・Multiclass Neural Network
++ Multiclass Decision Forest
++ Multiclass Decision Jungle
++ Multiclass Logistic Regression
++ Multiclass Neural Network
 上記4つの中から好きな物を選んでドラッグ＆ドロップ
 Multiclass〜の下の点とTrain Modelの左上を線でつなげる
 
