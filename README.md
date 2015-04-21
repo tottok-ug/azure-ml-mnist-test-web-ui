@@ -1,4 +1,4 @@
-Azure Machine Learning - MNIST 確認用フォーム
+Azure Machine Learning - ハンズオン MNISTで手書き文字認識
 =============
 
 ## 機械学習とは
