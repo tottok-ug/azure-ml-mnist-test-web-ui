@@ -122,9 +122,9 @@ PHPの動くWebサーバのドキュメントルートに
 
 #### 使い方
 
-![AzureML MNIST 確認フォーム](img/azureml-mnist-form.png)
+![AzureML MNIST 確認フォーム](README.img/azureml-mnist-form.png)
 AzureMLのWeb Serviceから、POST先のURLととAPI KEYを入手して、
 
-![Azure ML Web API の情報入力](img/azureml-APIInfomation.png)
+![Azure ML Web API の情報入力](README.img/azureml-APIInfomation.png)
 ↑の二箇所に入れる
 
