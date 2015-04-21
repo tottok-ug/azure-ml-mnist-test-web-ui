@@ -18,10 +18,55 @@ Azure Machine Learning - MNIST 確認用フォーム
 
 ## 使い方
 ### Azure Machine Learningの使い方
+https://account.windowsazure.com/Home/Index
+に接続しログイン
+→右上の「ポータル」を選択
 
+「MACHINE LEARNING」を選択後、左下の「新規」から「簡易作成」
+「ワークスペース名」と「ストレージアカウント名」を記入し、「MLワークスペースの作成」
+
+「自分のワークスペースにアクセス」の「ML Studio にサインイン」を選択
+
+左下の「NEW」から「Blank Experiment」を選択
+Saved Datasets / MNIST Train 60k 28x28 dense をドラッグ＆ドロップ
+Machine Learning / Train / Train Model をドラッグ＆ドロップ
+MNIST Train 60k 28x28 denseの下の点とTrain Modelの右上を線でつなげる
+
+Machine Learning / Initialize Model / Classification / の
+・Multiclass Decision Forest
+・Multiclass Decision Jungle
+・Multiclass Logistic Regression
+・Multiclass Neural Network
+上記4つの中から好きな物を選んでドラッグ＆ドロップ
+Multiclass〜の下の点とTrain Modelの左上を線でつなげる
+
+Train Modelをクリックし、右に出た「Launch column selector」を選択
+空欄のところをクリックすると一番上に「Label」があるのでこれを選択
+
+Machine Learning / Initialize Model / Score / Score Model をドラッグ＆ドロップ
+Train Modelの下の点とScore Modelの左上を線でつなげる
+
+Saved Datasets / MNIST Test 10k 28x28 dense をドラッグ＆ドロップ
+MNIST Test 10k 28x28 denseの下の点とScore Modelの右上を線でつなげる
+
+Machine Learning / Evaluate / Evaluate Model をドラッグ＆ドロップ
+Score Modelの下の点とEvaluate Modelの上の点どちらかを線でつなげる
+
+下の「RUN」ボタンをクリック
+RUNが終了したら（Evaluate Modelまでチェックマークがついたら）Evaluate Modelの下の点をクリック
+Visualizeを選択すると結果が表示される
+
+Web Service / Input と
+Web Service / Output をドラッグ＆ドロップ
+Inputの下の点とScore Modelの右上を線でつなげる
+Outputの上の点とScore Modelの下を線でつなげる
+
+下の「PUBLISH WEB SERVICE」ボタンをクリックし、YESを選択
 
 
 ### MNIST 確認用フォームの使い方
+
+
 
 #### インストール
 PHPの動くWebサーバのドキュメントルートに
