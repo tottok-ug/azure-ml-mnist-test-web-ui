@@ -18,50 +18,90 @@ Azure Machine Learning - MNIST 確認用フォーム
 
 ## 使い方
 ### Azure Machine Learningの使い方
+
+#### WORKSPACEの作成
+
 https://account.windowsazure.com/Home/Index
 に接続しログイン
 →右上の「ポータル」を選択
+  // TODO 図が欲しい
+
 
 「MACHINE LEARNING」を選択後、左下の「新規」から「簡易作成」
 「ワークスペース名」と「ストレージアカウント名」を記入し、「MLワークスペースの作成」
+  // TODO 図が欲しい
 
 「自分のワークスペースにアクセス」の「ML Studio にサインイン」を選択
+  // TODO 図が欲しい
+
+
+#### Experimentsの作成
 
 左下の「NEW」から「Blank Experiment」を選択
+  // TODO ここもうちょっと補充
+ 
+#### 機械学習のモデルを作成する。
+
 Saved Datasets / MNIST Train 60k 28x28 dense をドラッグ＆ドロップ
+  // TODO 図が欲しい
+
 Machine Learning / Train / Train Model をドラッグ＆ドロップ
+  // TODO 図が欲しい
+
 MNIST Train 60k 28x28 denseの下の点とTrain Modelの右上を線でつなげる
+  // TODO 図が欲しい
 
 Machine Learning / Initialize Model / Classification / の
+
 + Multiclass Decision Forest
 + Multiclass Decision Jungle
 + Multiclass Logistic Regression
 + Multiclass Neural Network
+ 
 上記4つの中から好きな物を選んでドラッグ＆ドロップ
+  // TODO 図が欲しい
 Multiclass〜の下の点とTrain Modelの左上を線でつなげる
+  // TODO 図が欲しい
+
 
 Train Modelをクリックし、右に出た「Launch column selector」を選択
 空欄のところをクリックすると一番上に「Label」があるのでこれを選択
+  // TODO 図が欲しい
 
 Machine Learning / Initialize Model / Score / Score Model をドラッグ＆ドロップ
 Train Modelの下の点とScore Modelの左上を線でつなげる
+  // TODO 図が欲しい
 
 Saved Datasets / MNIST Test 10k 28x28 dense をドラッグ＆ドロップ
 MNIST Test 10k 28x28 denseの下の点とScore Modelの右上を線でつなげる
+  // TODO 図が欲しい
 
 Machine Learning / Evaluate / Evaluate Model をドラッグ＆ドロップ
 Score Modelの下の点とEvaluate Modelの上の点どちらかを線でつなげる
+  // TODO 図が欲しい
 
 下の「RUN」ボタンをクリック
 RUNが終了したら（Evaluate Modelまでチェックマークがついたら）Evaluate Modelの下の点をクリック
 Visualizeを選択すると結果が表示される
+  // TODO 図が欲しい
+
+#### Web APIとして公開する準備
 
 Web Service / Input と
 Web Service / Output をドラッグ＆ドロップ
+  // TODO 図が欲しい
 Inputの下の点とScore Modelの右上を線でつなげる
 Outputの上の点とScore Modelの下を線でつなげる
+  // TODO 図が欲しい
+
 
 下の「PUBLISH WEB SERVICE」ボタンをクリックし、YESを選択
+  // TODO 図が欲しい
+
+#### Web APIのテスト
+  // TODO テストのしかたとか
+
+
 
 
 ### MNIST 確認用フォームの使い方
