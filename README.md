@@ -21,35 +21,48 @@ Azure Machine Learning - ハンズオン MNISTで手書き文字認識
 
 #### WORKSPACEの作成
 
-https://account.windowsazure.com/Home/Index
+https://account.windowsazure.com
 に接続しログイン
-→右上の「ポータル」を選択
-  // TODO 図が欲しい
 
+![login](README.img/azureml-login.png)
+
+右上の「ポータル」を選択
+
+![portal](README.img/azureml-portal.png)
 
 「MACHINE LEARNING」を選択後、左下の「新規」から「簡易作成」
-「ワークスペース名」と「ストレージアカウント名」を記入し、「MLワークスペースの作成」
-  // TODO 図が欲しい
 
+![mlnew](README.img/azureml-mlnew.png)
+
+「ワークスペース名」と「ストレージアカウント名」を記入し、「MLワークスペースの作成」
+
+![ws](README.img/azureml-ws.png)
+
+作成した「MACHINE LEARNING」を選択し、
 「自分のワークスペースにアクセス」の「ML Studio にサインイン」を選択
-  // TODO 図が欲しい
+
+![mlssign](README.img/azureml-mlssign.png)
 
 
 #### Experimentsの作成
 
 左下の「NEW」から「Blank Experiment」を選択
-  // TODO ここもうちょっと補充
+
+![blank](README.img/azureml-blank.png)
  
 #### 機械学習のモデルを作成する。
 
 Saved Datasets / MNIST Train 60k 28x28 dense をドラッグ＆ドロップ
-  // TODO 図が欲しい
+
+![60000](README.img/azureml-60000.png)
 
 Machine Learning / Train / Train Model をドラッグ＆ドロップ
-  // TODO 図が欲しい
+
+![train](README.img/azureml-train.png)
 
 MNIST Train 60k 28x28 denseの下の点とTrain Modelの右上を線でつなげる
-  // TODO 図が欲しい
+
+![60k-train](README.img/azureml-60k-train.png)
 
 Machine Learning / Initialize Model / Classification / の
 
@@ -59,14 +72,17 @@ Machine Learning / Initialize Model / Classification / の
 + Multiclass Neural Network
  
 上記4つの中から好きな物を選んでドラッグ＆ドロップ
-  // TODO 図が欲しい
 Multiclass〜の下の点とTrain Modelの左上を線でつなげる
-  // TODO 図が欲しい
 
+![60k-train](README.img/azureml-multi.png)
 
 Train Modelをクリックし、右に出た「Launch column selector」を選択
+
+![](README.img/)
+
 空欄のところをクリックすると一番上に「Label」があるのでこれを選択
-  // TODO 図が欲しい
+
+![](README.img/)
 
 Machine Learning / Initialize Model / Score / Score Model をドラッグ＆ドロップ
 Train Modelの下の点とScore Modelの左上を線でつなげる
