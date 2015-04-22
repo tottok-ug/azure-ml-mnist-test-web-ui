@@ -78,71 +78,76 @@ Multiclass〜の下の点とTrain Modelの左上を線でつなげる
 
 Train Modelをクリックし、右に出た「Launch column selector」を選択
 
-![](README.img/)
+![launch](README.img/azureml-launch.png)
 
 空欄のところをクリックすると一番上に「Label」があるのでこれを選択
 
-![](README.img/)
+![label](README.img/azureml-label.png)
 
 Machine Learning / Initialize Model / Score / Score Model をドラッグ＆ドロップ
 Train Modelの下の点とScore Modelの左上を線でつなげる
-  // TODO 図が欲しい
+
+![score](README.img/azureml-score.png)
 
 Saved Datasets / MNIST Test 10k 28x28 dense をドラッグ＆ドロップ
 MNIST Test 10k 28x28 denseの下の点とScore Modelの右上を線でつなげる
-  // TODO 図が欲しい
+
+![10k](README.img/azureml-10k.png)
 
 Machine Learning / Evaluate / Evaluate Model をドラッグ＆ドロップ
 Score Modelの下の点とEvaluate Modelの上の点どちらかを線でつなげる
-  // TODO 図が欲しい
+
+![eva](README.img/azureml-eva.png)
 
 下の「RUN」ボタンをクリック
 RUNが終了したら（Evaluate Modelまでチェックマークがついたら）Evaluate Modelの下の点をクリック
 Visualizeを選択すると結果が表示される
-  // TODO 図が欲しい
+
+![](README.img/azureml-visual.png)
 
 #### Web APIとして公開する準備
 
 Web Service / Input と
 Web Service / Output をドラッグ＆ドロップ
-  // TODO 図が欲しい
+
 Inputの下の点とScore Modelの右上を線でつなげる
 Outputの上の点とScore Modelの下を線でつなげる
-  // TODO 図が欲しい
+下の方にあるフラスコマーク「Click to Swich to web service view」をクリック
+（クリックすると、画像のように地球マークになる）
 
+![webservice](README.img/azureml-webservice.png)
 
 下の「PUBLISH WEB SERVICE」ボタンをクリックし、YESを選択
 ![publish web service button](README.img/azureml-publish-webservice-button.png)
 
-![publish!](README.img/azureml-publish.png)
 
-### Web API
- Public web Serviceボタンをクリックすると、下のような画面が開きます。
+![publish!](README.img/azureml-publish.png)
+		
+### Web API		
+Public web Serviceボタンをクリックすると、下のような画面が開きます。
 ![Webservice Dashboard](README.img/azureml-webservice-dashboard.png)
 
- 	
+
 この画面では、今作成したWeb APIの仕様を確認したり、テストしたりすることができます。
 
 ![ドキュメントのリンク](README.img/azureml-documentlink.png)
-  
- APIの仕様を確認すると、どのようなエンドポイントにアクセスし、
- どのようなパラメータがあり、どのようなレスポンスが帰ってくるのかを確認する事ができます。
+  		
+APIの仕様を確認すると、どのようなエンドポイントにアクセスし、
+どのようなパラメータがあり、どのようなレスポンスが帰ってくるのかを確認する事ができます。
 
 
- 
- もし自分のアプリケーションに機械学習の機能を取り込むのであれば、このドキュメントを見ることになります。
- 
- ドキュメントの最後には、R, Python, C#でのサンプルコードも載っているので、参考にすることができます。
- 
+もし自分のアプリケーションに機械学習の機能を取り込むのであれば、このドキュメントを見ることになります。
+
+ドキュメントの最後には、R, Python, C#でのサンプルコードも載っているので、参考にすることができます。
+
 #### Web APIのテスト
 WebAPIのテストもブラウザから簡単に行う事ができます。
-	
+
 ![テストダイアログ](README.img/azureml-test-form.png)
 このリンクをクリックする事で、テスト用のフォームが開きます。
-	
+
 入力として必要な項目を入力し、チェックマークをクリックすると、APIに問い合わせをします。
- 	
- 	
+
 
 ## MNIST 確認用フォームの使い方
 
@@ -182,7 +187,7 @@ AzureMLのWeb Serviceから、POST先のURLととAPI KEYを入手します。
 新しく仮想マシンを立ち上げ、SSHでログイン
 
 ```sh
-$ sudo yum -y install httpd php php-mbstring php-gd git 
+$ sudo yum -y install httpd php php-mbstring php-gd git
 $ git clone https://github.com/tottok-ug/azure-ml-mnist-test-web-ui.git
 ```
 
@@ -199,3 +204,4 @@ public/配下の
 + upload.php
 
 を入れておく。
+
