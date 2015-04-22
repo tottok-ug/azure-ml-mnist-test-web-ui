@@ -144,13 +144,9 @@ WebAPIのテストもブラウザから簡単に行う事ができます。
  	
  	
 
-### MNIST 確認用フォームの使い方
+## MNIST 確認用フォームの使い方
 
-
-
-
-
-#### 使い方
+### AzureMLの情報を入力する
 
 ![AzureML MNIST 確認フォーム](README.img/azureml-mnist-form.png)
 このようなページが開きます。
@@ -162,10 +158,21 @@ AzureMLのWeb Serviceから、POST先のURLととAPI KEYを入手します。
 - エンドポイント
 ![エンドポイント](README.img/azureml-endpoint.png)
 
-
+上記二つの情報を確認フォームの0.Azure MLのAPI情報に入力
 ![Azure ML Web API の情報入力](README.img/azureml-APIInfomation.png)
-↑の二箇所に入れる
 
+### 手書きの文字を認識する。
+
+- ペイント等で文字を書きます。
+- 書いた文字をアップロードします。
+
+![画像をアップロード](README.img/azureml-upload.png)
+
+- アップロードされた画像はリサイズされます。
+![画像のリサイズ](README.img/azureml-resize.png)
+
+- 文字認識完了
+![画像の認識](README.img/azureml-detect.png)
 
 
 ---
@@ -176,7 +183,7 @@ AzureMLのWeb Serviceから、POST先のURLととAPI KEYを入手します。
 
 ```sh
 $ sudo yum -y install httpd php php-mbstring php-gd git 
-$ git clone git@github.com:tottok-ug/azure-ml-mnist-test-web-ui.git
+$ git clone https://github.com/tottok-ug/azure-ml-mnist-test-web-ui.git
 ```
 
 
