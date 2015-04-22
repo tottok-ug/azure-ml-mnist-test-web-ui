@@ -125,7 +125,6 @@ Outputの上の点とScore Modelの下を線でつなげる
 		
 ### Web API		
 Public web Serviceボタンをクリックすると、下のような画面が開きます。
- 
 ![Webservice Dashboard](README.img/azureml-webservice-dashboard.png)
 
 
@@ -134,15 +133,12 @@ Public web Serviceボタンをクリックすると、下のような画面が�
 ![ドキュメントのリンク](README.img/azureml-documentlink.png)
   		
 APIの仕様を確認すると、どのようなエンドポイントにアクセスし、
- 
 どのようなパラメータがあり、どのようなレスポンスが帰ってくるのかを確認する事ができます。
 
 
 もし自分のアプリケーションに機械学習の機能を取り込むのであれば、このドキュメントを見ることになります。
 
-
-ドキュメントの最後には、R, Python, C#でのサンプルコードも載っているので、参考にすることができます。		
- 
+ドキュメントの最後には、R, Python, C#でのサンプルコードも載っているので、参考にすることができます。
 
 #### Web APIのテスト
 WebAPIのテストもブラウザから簡単に行う事ができます。
@@ -158,7 +154,7 @@ WebAPIのテストもブラウザから簡単に行う事ができます。
 ### AzureMLの情報を入力する
 
 ![AzureML MNIST 確認フォーム](README.img/azureml-mnist-form.png)
-このようなページが開きます。		
+このようなページが開きます。
 
 AzureMLのWeb Serviceから、POST先のURLととAPI KEYを入手します。
 
