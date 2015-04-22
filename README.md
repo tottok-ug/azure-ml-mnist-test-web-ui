@@ -124,74 +124,75 @@ Outputの上の点とScore Modelの下を線でつなげる
 ![publish!](README.img/azureml-publish.png)
 		
 ### Web API		
- Public web Serviceボタンをクリックすると、下のような画面が開きます。		
-![Webservice Dashboard](README.img/azureml-webservice-dashboard.png)		
-		
- 			
+Public web Serviceボタンをクリックすると、下のような画面が開きます。
+ 
+![Webservice Dashboard](README.img/azureml-webservice-dashboard.png)
+
+
 この画面では、今作成したWeb APIの仕様を確認したり、テストしたりすることができます。
 
 ![ドキュメントのリンク](README.img/azureml-documentlink.png)
   		
- APIの仕様を確認すると、どのようなエンドポイントにアクセスし、
+APIの仕様を確認すると、どのようなエンドポイントにアクセスし、
  
- どのようなパラメータがあり、どのようなレスポンスが帰ってくるのかを確認する事ができます。
- 
- 
- 
- もし自分のアプリケーションに機械学習の機能を取り込むのであれば、このドキュメントを見ることになります。		
- 		
- ドキュメントの最後には、R, Python, C#でのサンプルコードも載っているので、参考にすることができます。		
+どのようなパラメータがあり、どのようなレスポンスが帰ってくるのかを確認する事ができます。
+
+
+もし自分のアプリケーションに機械学習の機能を取り込むのであれば、このドキュメントを見ることになります。
+
+
+ドキュメントの最後には、R, Python, C#でのサンプルコードも載っているので、参考にすることができます。		
  
 
 #### Web APIのテスト
 WebAPIのテストもブラウザから簡単に行う事ができます。
-			
+
 ![テストダイアログ](README.img/azureml-test-form.png)
-このリンクをクリックする事で、テスト用のフォームが開きます。		
-			
+このリンクをクリックする事で、テスト用のフォームが開きます。
+
 入力として必要な項目を入力し、チェックマークをクリックすると、APIに問い合わせをします。
 
 
-## MNIST 確認用フォームの使い方		
- 		 
-### AzureMLの情報を入力する		
- 		 
-![AzureML MNIST 確認フォーム](README.img/azureml-mnist-form.png)		
+## MNIST 確認用フォームの使い方
+
+### AzureMLの情報を入力する
+
+![AzureML MNIST 確認フォーム](README.img/azureml-mnist-form.png)
 このようなページが開きます。		
-		
+
 AzureMLのWeb Serviceから、POST先のURLととAPI KEYを入手します。
 
 - API Key
-![API Key](README.img/azureml-apikey.png)		
-- エンドポイント		
-![エンドポイント](README.img/azureml-endpoint.png)		
-		
-上記二つの情報を確認フォームの0.Azure MLのAPI情報に入力		
-![Azure ML Web API の情報入力](README.img/azureml-APIInfomation.png)		
- 		 
-### 手書きの文字を認識する。		
- 		 
-- ペイント等で文字を書きます。		
-- 書いた文字をアップロードします。		
- 		 
-![画像をアップロード](README.img/azureml-upload.png)		
-		
-- アップロードされた画像はリサイズされます。		
-![画像のリサイズ](README.img/azureml-resize.png)		
-		
-- 文字認識完了		
-![画像の認識](README.img/azureml-detect.png)		
-		
-		
----		
-		
+![API Key](README.img/azureml-apikey.png)
+- エンドポイント
+![エンドポイント](README.img/azureml-endpoint.png)
+
+上記二つの情報を確認フォームの0.Azure MLのAPI情報に入力
+![Azure ML Web API の情報入力](README.img/azureml-APIInfomation.png)
+
+### 手書きの文字を認識する。
+
+- ペイント等で文字を書きます。
+- 書いた文字をアップロードします。
+
+![画像をアップロード](README.img/azureml-upload.png)
+
+- アップロードされた画像はリサイズされます。
+![画像のリサイズ](README.img/azureml-resize.png)
+
+- 文字認識完了
+![画像の認識](README.img/azureml-detect.png)
+
+
+---
+
 ## MNIST 確認フォームのインストール
 #### インストール
-新しく仮想マシンを立ち上げ、SSHでログイン		
-		
-```sh		
-$ sudo yum -y install httpd php php-mbstring php-gd git 		
-$ git clone https://github.com/tottok-ug/azure-ml-mnist-test-web-ui.git		
+新しく仮想マシンを立ち上げ、SSHでログイン
+
+```sh
+$ sudo yum -y install httpd php php-mbstring php-gd git
+$ git clone https://github.com/tottok-ug/azure-ml-mnist-test-web-ui.git
 ```
 
 
