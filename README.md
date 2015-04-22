@@ -112,19 +112,23 @@ Outputの上の点とScore Modelの下を線でつなげる
 
 
 下の「PUBLISH WEB SERVICE」ボタンをクリックし、YESを選択
-  // TODO 図が欲しい
+![publish web service button](README.img/azureml-publish-webservice-button.png)
+
+![publish!](README.img/azureml-publish.png)
 
 ### Web API
  Public web Serviceボタンをクリックすると、下のような画面が開きます。
+![Webservice Dashboard](README.img/azureml-webservice-dashboard.png)
+
  	
- // TODO 図
- 	
- この画面では、今作成したWeb APIの仕様を確認したり、テストしたりすることができます。
- 
- // TODO 図 APIのドキュメントリンクのテーブルらへん
- 
+この画面では、今作成したWeb APIの仕様を確認したり、テストしたりすることができます。
+
+![ドキュメントのリンク](README.img/azureml-documentlink.png)
+  
  APIの仕様を確認すると、どのようなエンドポイントにアクセスし、
  どのようなパラメータがあり、どのようなレスポンスが帰ってくるのかを確認する事ができます。
+
+
  
  もし自分のアプリケーションに機械学習の機能を取り込むのであれば、このドキュメントを見ることになります。
  
@@ -133,22 +137,52 @@ Outputの上の点とScore Modelの下を線でつなげる
 #### Web APIのテスト
 WebAPIのテストもブラウザから簡単に行う事ができます。
 	
-// TODO 図 テストダイアログのあたり
-	
+![テストダイアログ](README.img/azureml-test-form.png)
 このリンクをクリックする事で、テスト用のフォームが開きます。
 	
-入力として必要な項目を入力し、[??]をクリックすると、APIに問い合わせをします。
+入力として必要な項目を入力し、チェックマークをクリックすると、APIに問い合わせをします。
  	
  	
-
-
 
 ### MNIST 確認用フォームの使い方
 
 
 
+
+
+#### 使い方
+
+![AzureML MNIST 確認フォーム](README.img/azureml-mnist-form.png)
+このようなページが開きます。
+
+AzureMLのWeb Serviceから、POST先のURLととAPI KEYを入手します。
+
+- API Key
+![API Key](README.img/azureml-apikey.png)
+- エンドポイント
+![エンドポイント](README.img/azureml-endpoint.png)
+
+
+![Azure ML Web API の情報入力](README.img/azureml-APIInfomation.png)
+↑の二箇所に入れる
+
+
+
+---
+
+## MNIST 確認フォームのインストール
 #### インストール
+新しく仮想マシンを立ち上げ、SSHでログイン
+
+```sh
+$ sudo yum -y install httpd php php-mbstring php-gd git 
+$ git clone git@github.com:tottok-ug/azure-ml-mnist-test-web-ui.git
+```
+
+
 PHPの動くWebサーバのドキュメントルートに
+
+public/配下の
 
 + img/
 + js/
@@ -158,12 +192,3 @@ PHPの動くWebサーバのドキュメントルートに
 + upload.php
 
 を入れておく。
-
-#### 使い方
-
-![AzureML MNIST 確認フォーム](README.img/azureml-mnist-form.png)
-AzureMLのWeb Serviceから、POST先のURLととAPI KEYを入手して、
-
-![Azure ML Web API の情報入力](README.img/azureml-APIInfomation.png)
-↑の二箇所に入れる
-
