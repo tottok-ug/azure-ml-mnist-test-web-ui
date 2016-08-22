@@ -100,16 +100,19 @@ Score Modelの下の点とEvaluate Modelの上の点どちらかを線でつな�
 RUNが終了したら（Evaluate Modelまでチェックマークがついたら）Evaluate Modelの下の点をクリック
 Visualizeを選択すると結果が表示される
 
-![](README.img/azureml-visual.png)
+![visual](README.img/azureml-visual.png)
 
 #### Web APIとして公開する準備
 
 Web Service / Input と
 Web Service / Output をドラッグ＆ドロップ
 
-Inputの下の点とScore Modelの右上を線でつなげる
-Outputの上の点とScore Modelの下を線でつなげる
+Inputの下の点とScore Modelの右上を線でつなげる  
+Outputの上の点とScore Modelの下を線でつなげる  
 下の方にあるフラスコマーク「Click to Swich to web service view」をクリック
+
+![webservice-view](README.img/azureml-webservice-view.png)
+
 （クリックすると、画像のように地球マークになる）
 
 ![webservice](README.img/azureml-webservice.png)
@@ -117,13 +120,16 @@ Outputの上の点とScore Modelの下を線でつなげる
 再度`RUN`をし、完了したら
 下の「SET UP WEB SERVICE」の`Predictive Web Service [Recommended]`を選択
 
-![publish web service button](README.img/azureml-publish-webservice-button.png)
+![setup web service button](README.img/azureml-setup-webservice-button.png)
 
-![publish!](README.img/azureml-publish.png)
+もう一度`RUN`し、完了すると表示が`Training experiment`と`Predictive experiment`タブに分かれる
 
-もう一度`RUN`し、完了すると表示が`Training experiment`と`Predictive experiment`タブに分かれる  
+![experiment-tab](README.img/azureml-experiment-tab.png)
+
 `Predictive experiment`タブを選択  
 下の`DEPLOY WEB SERVICE`の`Deploy Web Service [Classic]`を選択
+
+![deploy-webservice-button](README.img/azureml-deploy-webservice-button.png)
 		
 ### Web API		
 しばらくすると、下のような画面が開きます。
@@ -132,8 +138,6 @@ Outputの上の点とScore Modelの下を線でつなげる
 
 この画面では、今作成したWeb APIの仕様を確認したり、テストしたりすることができます。
 
-![ドキュメントのリンク](README.img/azureml-documentlink.png)
-  		
 APIの仕様を確認すると、どのようなエンドポイントにアクセスし、
 どのようなパラメータがあり、どのようなレスポンスが帰ってくるのかを確認する事ができます。
 
