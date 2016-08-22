@@ -21,16 +21,12 @@ Azure Machine Learning - ハンズオン MNISTで手書き文字認識
 
 #### WORKSPACEの作成
 
-https://account.windowsazure.com
+https://manage.windowsazure.com/
 に接続しログイン
 
 ![login](README.img/azureml-login.png)
 
-右上の「ポータル」を選択
-
-![portal](README.img/azureml-portal.png)
-
-「MACHINE LEARNING」を選択後、左下の「新規」から「簡易作成」
+左メニューから「MACHINE LEARNING」を選択後、左下の「新規」から「簡易作成」
 
 ![mlnew](README.img/azureml-mlnew.png)
 
@@ -42,7 +38,6 @@ https://account.windowsazure.com
 「自分のワークスペースにアクセス」の「ML Studio にサインイン」を選択
 
 ![mlssign](README.img/azureml-mlssign.png)
-
 
 #### Experimentsの作成
 
@@ -80,7 +75,9 @@ Train Modelをクリックし、右に出た「Launch column selector」を選�
 
 ![launch](README.img/azureml-launch.png)
 
-空欄のところをクリックすると一番上に「Label」があるのでこれを選択
+空欄のところをクリックすると一番上に「Label」があるのでこれを選択  
+`>`をクリックして`SELECTED COLUMNS`に移動  
+`✔`で閉じる︎
 
 ![label](README.img/azureml-label.png)
 
@@ -117,14 +114,19 @@ Outputの上の点とScore Modelの下を線でつなげる
 
 ![webservice](README.img/azureml-webservice.png)
 
-下の「PUBLISH WEB SERVICE」ボタンをクリックし、YESを選択
+再度`RUN`をし、完了したら
+下の「SET UP WEB SERVICE」の`Predictive Web Service [Recommended]`を選択
+
 ![publish web service button](README.img/azureml-publish-webservice-button.png)
 
-
 ![publish!](README.img/azureml-publish.png)
+
+もう一度`RUN`し、完了すると表示が`Training experiment`と`Predictive experiment`タブに分かれる  
+`Predictive experiment`タブを選択  
+下の`DEPLOY WEB SERVICE`の`Deploy Web Service [Classic]`を選択
 		
 ### Web API		
-Public web Serviceボタンをクリックすると、下のような画面が開きます。
+しばらくすると、下のような画面が開きます。
 ![Webservice Dashboard](README.img/azureml-webservice-dashboard.png)
 
 
@@ -143,8 +145,8 @@ APIの仕様を確認すると、どのようなエンドポイントにアク�
 #### Web APIのテスト
 WebAPIのテストもブラウザから簡単に行う事ができます。
 
+`Default Endpoint`の`TEST`ボタンをクリックする事で、テスト用のフォームが開きます。
 ![テストダイアログ](README.img/azureml-test-form.png)
-このリンクをクリックする事で、テスト用のフォームが開きます。
 
 入力として必要な項目を入力し、チェックマークをクリックすると、APIに問い合わせをします。
 
