@@ -189,7 +189,10 @@ AzureMLのWeb Serviceから、POST先のURLととAPI KEYを入手します。
 ---
 
 ## MNIST 確認フォームのインストール
-#### インストール
+### インストール
+
+#### VM
+
 新しく仮想マシンを立ち上げ、SSHでログイン
 
 ```sh
@@ -211,3 +214,14 @@ public/配下の
 
 を入れておく。
 
+#### docker
+
+##### Requirements
+[docker](https://docs.docker.com/engine/installation/)
+
+##### To Use
+```sh
+git clone https://github.com/tottok-ug/azure-ml-mnist-test-web-ui.git
+./docker_run.sh
+open http://localhost
+```
