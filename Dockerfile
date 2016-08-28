@@ -1,5 +1,12 @@
-FROM php:5-fpm-alpine
-COPY ./public/ /var/www/html/
-EXPOSE 80
+FROM alpine
+    
+RUN apk update && \
+    apk add apache2 php5-apache2 php5-gd php5-json && \
+    echo "ServerName $HOSTNAME" >/etc/apache2/conf.d/fqdn.conf && \
+    rm -rf /var/cache/apk/* && \
+    mkdir /run/apache2 
 
-CMD ['/usr/sbin/httpd', 'start' ]
+COPY ./public/ /var/www/localhost/htdocs/
+EXPOSE 80  
+CMD ["httpd","-D", "FOREGROUND"]
+
