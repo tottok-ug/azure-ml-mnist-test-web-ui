@@ -221,7 +221,6 @@ public/配下の
 
 ##### To Use
 ```sh
-git clone https://github.com/tottok-ug/azure-ml-mnist-test-web-ui.git
 ./docker_run.sh
 open http://localhost
 ```
