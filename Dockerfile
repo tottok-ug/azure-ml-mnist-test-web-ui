@@ -9,3 +9,4 @@ RUN apk update && \
 COPY ./public/ /var/www/localhost/htdocs/
 EXPOSE 80  
 CMD ["httpd","-D", "FOREGROUND"]
+
