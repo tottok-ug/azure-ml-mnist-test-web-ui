@@ -3,45 +3,52 @@ Azure Machine Learning - ハンズオン MNISTで手書き文字認識
 
 ## 機械学習とは
 
-
 ## MNISTデータセットとは
 国立標準技術研究所の混合データ セット (MNIST データ セット) は、さまざまな IR アルゴリズムを比較する際のベンチマークとして機能させるように、IR の研究者によって作成されました。基本的な考え方としては、テストする IR アルゴリズムまたはソフトウェア システムがある場合、MNIST データ セットに対してアルゴリズムまたはシステムを実行し、他のシステムについて以前発行された結果と比較します。
 
 データ セットには計 70,000 枚の画像が含まれており、そのうち 60,000 枚は学習用画像 (IR モデルの作成に使用) で 10,000 枚は判別用画像 (モデルの精度の評価に使用) です。各 MNIST 画像は、1 つの手書き数字をデジタル化したものです。サイズはそれぞれ 28 x 28 ピクセルです。各ピクセル値は 0 (白) ～ 255 (黒) の値で、中間のピクセル値は灰色の網かけを表します。図 2 に示すのは、学習用セットの最初の画像 8 枚です。各画像に対応した実際の数値を識別するのは、人間には簡単ですが、コンピューターにとっては至難の業です。
 
 ## Azure Machine Learningとは
-
-
-
-
+Microsoftが提供するクラウドサービスAzureの機能の一つで、ブラウザのみで機械学習のモデル作成、検証、デプロイまでが完結するサービスです。
 
 
 ## 使い方
 ### Azure Machine Learningの使い方
 
+#### Microsoft Azure Machine Learning Studio にサインイン
+https://studio.azureml.net
+にアクセスすると
+Microsoft Azure Machine Learning StudioのHome画面が表示されます。
+![home](README.img/azureml_001-home.png)
+
+水色の[Sign In]のボタンを押すとログインフォームが表示されます。
+
+
+![loginform](README.img/azureml_002-loginform.png)
+
+ ログインフォームにはAzureアカウントのメールアドレスを入力します。
+
+![password](README.img/azureml_003-password.png)
+入力したアカウントのパスワードを入力します。
+
+
+
 #### WORKSPACEの作成
+ログインが完了すると、以下のような画面になり、 my experimentsというボタンが現れます。
 
-https://manage.windowsazure.com/
-に接続しログイン
+![login後](README.img/azureml_004-HomeAfterLogin.png)
 
-![login](README.img/azureml-login.png)
+はじめて、Microsoft Azure Machine Learning Portalにログインすると、自動的にFree-Workspaceというワークスペースが作成されます。
 
-左メニューから「MACHINE LEARNING」を選択後、左下の「新規」から「簡易作成」
+ワークスペースと言うのは、Azure Machine Learningの中で色々なモデル、データ・セットをまとめたプロジェクトのようなものと思って下さい。
 
-![mlnew](README.img/azureml-mlnew.png)
 
-「ワークスペース名」と「ストレージアカウント名」を記入し、「MLワークスペースの作成」
+ここに、Experimentsというものを作り機械学習のモデルを作って行きます。
 
-![Workspaceの作成](README.img/azureml-ws.png)
-
-作成した「MACHINE LEARNING」を選択し、
-「自分のワークスペースにアクセス」の「ML Studio にサインイン」を選択
-
-![mlssign](README.img/azureml-mlssign.png)
 
 #### Experimentsの作成
 
-左下の「NEW」から「Blank Experiment」を選択
+左下の「NEW」から「Blank Experiment」を選択s
 
 ![blank](README.img/azureml-blank.png)
  
@@ -224,3 +231,28 @@ public/配下の
 ./docker_run.sh
 open http://localhost
 ```
+
+
+
+## さいごに
+この資料はAzure Machine Learningを使用して、機械学習を体験するためのハンズオン資料になります。
+
+今日このハンズオンを受け、どこかでこのハンズオンを実施したいと思ったら、
+資料および、確認用フォームのソースコードはgithubで公開されているので、使用してください。
+
+https://github.com/tottok-ug/azure-ml-mnist-test-web-ui 
+
+### 使用の条件
+
+この資料を使うための条件は一つです。
+
+1. 資料の鮮度を保つ事。
+
+2017年11月現在 Azure Machine Learningはアップデートが頻繁にされており、資料と現状で操作や諸々の文言等差異が発生している可能性があります。
+
+こちらについては、使用する前には必ず一度はご自身でお試しいただき、現状と資料との差異を確認してください。
+もし、資料との差異が存在した場合には、修正しPullRequestを送ってください。
+
+
+
+Version. 2017-11-24
