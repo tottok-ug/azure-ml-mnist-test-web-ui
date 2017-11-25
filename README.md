@@ -38,7 +38,7 @@ Microsoft Azure Machine Learning StudioのHome画面が表示されます。
 
 ![login後](README.img/azureml_004-HomeAfterLogin.png)
 
-はじめて、Microsoft Azure Machine Learning Portalにログインすると、自動的にFree-Workspaceというワークスペースが作成されます。
+はじめて、Microsoft Azure Machine Learning Portalにログインすると、自動的に{アカウント名}-Free-Workspaceというワークスペースが作成されます。
 
 ワークスペースと言うのは、Azure Machine Learningの中で色々なモデル、データ・セットをまとめたプロジェクトのようなものと思って下さい。
 
@@ -109,7 +109,16 @@ Visualizeを選択すると結果が表示される
 
 ![visual](README.img/azureml-visual.png)
 
+
+
+![evaluate](README.img/azureml_030-Evaluate.png)
+
+
+
 #### Web APIとして公開する準備
+![webservice](README.img/azureml_100-setupwebservice.png)
+![webservice](README.img/azureml_101-webservice.png)
+
 
 Web Service / Input と
 Web Service / Output をドラッグ＆ドロップ
@@ -233,7 +242,7 @@ open http://localhost
 ```
 
 
-
+---
 ## さいごに
 この資料はAzure Machine Learningを使用して、機械学習を体験するためのハンズオン資料になります。
 
