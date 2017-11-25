@@ -7,7 +7,7 @@ Azure Machine Learning - ハンズオン MNISTで手書き文字認識
 国立標準技術研究所の混合データ セット (MNIST データ セット) は、さまざまな IR アルゴリズムを比較する際のベンチマークとして機能させるように、IR の研究者によって作成されました。基本的な考え方としては、テストする IR アルゴリズムまたはソフトウェア システムがある場合、MNIST データ セットに対してアルゴリズムまたはシステムを実行し、他のシステムについて以前発行された結果と比較します。
 
 データ セットには計 70,000 枚の画像が含まれており、そのうち 60,000 枚は学習用画像 (IR モデルの作成に使用) で 10,000 枚は判別用画像 (モデルの精度の評価に使用) です。各 MNIST 画像は、1 つの手書き数字をデジタル化したものです。サイズはそれぞれ 28 x 28 ピクセルです。各ピクセル値は 0 (白) ～ 255 (黒) の値で、中間のピクセル値は灰色の網かけを表します。図 2 に示すのは、学習用セットの最初の画像 8 枚です。各画像に対応した実際の数値を識別するのは、人間には簡単ですが、コンピューターにとっては至難の業です。
-
+　
 ## Azure Machine Learningとは
 Microsoftが提供するクラウドサービスAzureの機能の一つで、ブラウザのみで機械学習のモデル作成、検証、デプロイまでが完結するサービスです。
 
@@ -47,11 +47,18 @@ Microsoft Azure Machine Learning StudioのHome画面が表示されます。
 
 
 #### Experimentsの作成
+Experimentsとは、機械学習のモデルを作る場所になります。
+Experiments1つにつき、1つのAPIにすることが出来ます。
 
-左下の「NEW」から「Blank Experiment」を選択s
 
-![blank](README.img/azureml-blank.png)
- 
+左下の「NEW」から「Blank Experiment」を選択することで、空のExperimentsが作成されます。
+
+![blank](README.img/azureml_011-blank.png)
+
+![blank](README.img/azureml_012-blankexperiments.png)
+
+
+
 #### 機械学習のモデルを作成する。
 
 Saved Datasets / MNIST Train 60k 28x28 dense をドラッグ＆ドロップ
@@ -62,7 +69,7 @@ Machine Learning / Train / Train Model をドラッグ＆ドロップ
 
 ![train](README.img/azureml-train.png)
 
-MNIST Train 60k 28x28 denseの下の点とTrain Modelの右上を線でつなげる
+MNIST Train 60k 28x28 denseの下の点とTrain Modelの右上を線でつなげます
 
 ![60k-train](README.img/azureml-60k-train.png)
 
@@ -74,7 +81,7 @@ Machine Learning / Initialize Model / Classification / の
 + Multiclass Neural Network
  
 上記4つの中から好きな物を選んでドラッグ＆ドロップ
-Multiclass〜の下の点とTrain Modelの左上を線でつなげる
+Multiclass〜の下の点とTrain Modelの左上を線でつなげます。
 
 ![60k-train](README.img/azureml-multi.png)
 
@@ -84,7 +91,7 @@ Train Modelをクリックし、右に出た「Launch column selector」を選�
 
 空欄のところをクリックすると一番上に「Label」があるのでこれを選択  
 `>`をクリックして`SELECTED COLUMNS`に移動  
-`✔`で閉じる︎
+
 
 ![label](README.img/azureml-label.png)
 
@@ -104,53 +111,34 @@ Score Modelの下の点とEvaluate Modelの上の点どちらかを線でつな�
 ![eva](README.img/azureml-eva.png)
 
 下の「RUN」ボタンをクリック
-RUNが終了したら（Evaluate Modelまでチェックマークがついたら）Evaluate Modelの下の点をクリック
-Visualizeを選択すると結果が表示される
+RUNが終了したら（Evaluate Modelまでチェックマークがついたら）Evaluate Modelの下の点をクリックし、Visualizeを選択すると結果が表示されます。
 
 ![visual](README.img/azureml-visual.png)
 
-
+このVisualizeで精度の検証を行っていきます。
 
 ![evaluate](README.img/azureml_030-Evaluate.png)
+このようなマトリックスが出て来ます。
+このマトリックスを見ながら予測結果と正解を比較し、あっているあっていないというところを見ています。
 
 
 
 #### Web APIとして公開する準備
 ![webservice](README.img/azureml_100-setupwebservice.png)
-![webservice](README.img/azureml_101-webservice.png)
+下のメニューより、[SET UP WEB SERVICE]をクリックすると、Predictive Web Service [Recommended]を選択すると自動的にWebサービス化する準備が出来ます。
+Experimentsが2つに別れ、学習用のExperimentsと予測するためのExperimentsが作成されます(Training experimentとPredictive experiment)
+完了すると表示がタブに分かれ、ScoreModelの上下にWeb Service用のInput Outputのモジュールが繋がった状態になります。
 
-
-Web Service / Input と
-Web Service / Output をドラッグ＆ドロップ
-
-Inputの下の点とScore Modelの右上を線でつなげる  
-Outputの上の点とScore Modelの下を線でつなげる  
-下の方にあるフラスコマーク「Click to Swich to web service view」をクリック
-
-![webservice-view](README.img/azureml-webservice-view.png)
-
-（クリックすると、画像のように地球マークになる）
-
-![webservice](README.img/azureml-webservice.png)
-
-再度`RUN`をし、完了したら
-下の「SET UP WEB SERVICE」の`Predictive Web Service [Recommended]`を選択
-
-![setup web service button](README.img/azureml-setup-webservice-button.png)
-
-もう一度`RUN`し、完了すると表示が`Training experiment`と`Predictive experiment`タブに分かれる
 
 ![experiment-tab](README.img/azureml-experiment-tab.png)
 
-`Predictive experiment`タブを選択  
-下の`DEPLOY WEB SERVICE`の`Deploy Web Service [Classic]`を選択
-
-![deploy-webservice-button](README.img/azureml-deploy-webservice-button.png)
-		
-### Web API		
+この状態で再度RUNをクリックすると、Webサービスとしてデプロイ出来るようになります。
+![webservice](README.img/azureml_014-deploywebservice.png)
+Deploy Web Service[Classic]をクリックすることで、Webサービスとしてデプロイされます。
+		
+### Web API
 しばらくすると、下のような画面が開きます。
 ![Webservice Dashboard](README.img/azureml-webservice-dashboard.png)
-
 
 この画面では、今作成したWeb APIの仕様を確認したり、テストしたりすることができます。
 
@@ -265,3 +253,6 @@ https://github.com/tottok-ug/azure-ml-mnist-test-web-ui
 
 
 Version. 2017-11-24
+
+
+
